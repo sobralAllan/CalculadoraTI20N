@@ -58,5 +58,41 @@ namespace CalculadoraTI20N
                 return ConsultarNum1 / ConsultarNum2;
             }
         }//fim do dividir
+
+        public string Tabuada()
+        {
+            string resultado = "";
+
+            resultado += "Tabuada de " + ConsultarNum1; 
+            for (int i=0; i <= 10; i++)
+            {
+                resultado += "\n" + ConsultarNum1 + " * " + i + " = " + (ConsultarNum1 * i);        
+            }//fim do for
+
+            resultado += "\n\nTabuada de " + ConsultarNum2;
+            for (int i = 0; i <= 10; i++)
+            {
+                resultado += "\n" + ConsultarNum2 + " * " + i + " = " + (ConsultarNum2 * i);
+            }//fim do for
+
+            return resultado;
+        }//fim do método tabuada
+
+        public string Raiz()
+        {
+            string resultado = "";
+
+            resultado = "A raiz de " + ConsultarNum1 + " é: " + Math.Sqrt(ConsultarNum1) +
+                        "\nA raiz de " + ConsultarNum2 + " é: " + Math.Sqrt(ConsultarNum2);
+
+            return resultado;
+        }//fim do raiz
+
+        public double Potencia()
+        {
+            return Math.Pow(ConsultarNum1, ConsultarNum2);
+        }//fim do potencia
+
+        
     }//fim da classe
 }//fim do projeto
